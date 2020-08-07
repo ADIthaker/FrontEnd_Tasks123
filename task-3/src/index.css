@@ -1,0 +1,21 @@
+.sphere{
+    fill:rgba(230,230,230,0.8);
+    margin-left:200px;
+    stroke:black;
+}
+svg{
+    margin-left: 10rem;
+}
+.world-map{
+    margin:auto;
+    margin-top:3rem;
+}
+.country{
+   fill-opacity: 0.7;
+   stroke:rgb(131, 131, 131);
+   stroke-width: 0.1;
+   
+}
+.country:hover{
+    fill-opacity : 1;
+}
