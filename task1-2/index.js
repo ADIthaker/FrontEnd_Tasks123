@@ -4,7 +4,7 @@ const contactField =  document.getElementById('contact');
 const form = document.getElementById('form');
 const err =document.getElementById('error');
 
-form.addEventListener('submit',(e)=>{cd
+form.addEventListener('submit',(e)=>{
         var child = err.lastElementChild;  
         while (child) { 
             err.removeChild(child); 
@@ -15,12 +15,7 @@ form.addEventListener('submit',(e)=>{cd
     const contactRegex = /^\d+$/;
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     
-    if(contactField.value.length!==10){
-        let childErr = document.createElement('p');
-        childErr.innerHTML = "Contact no. not valid!!"; 
-        childErr.setAttribute('class','error__p');
-        err.appendChild(childErr);
-    }
+    
     if(!nameRegex.test(nameField.value) && !contactRegex.test(contactField.value) && contactField.value.length===10 && !emailRegex.test(emailField.value) ){
         let childErr = document.createElement('p');
         childErr.innerHTML = "All fields are invalid 😥"; 
@@ -54,7 +49,7 @@ form.addEventListener('submit',(e)=>{cd
             childErr.setAttribute('class','error__p');
             err.appendChild(childErr); 
         }
-        if(!contactRegex.test(contactField.value)){
+       else if(!contactRegex.test(contactField.value)){
             err.style.visibility = 'visible';
             let childErr = document.createElement('p');
             childErr.innerHTML = "Contact No. should be numeric 🙄";
@@ -62,7 +57,7 @@ form.addEventListener('submit',(e)=>{cd
             err.appendChild(childErr); 
         }
         
-        if(!emailRegex.test(emailField.value)){
+       else if(!emailRegex.test(emailField.value)){
             err.style.visibility = 'visible';
             let childErr = document.createElement('p');
             childErr.innerHTML = "Email is not valid!!";
