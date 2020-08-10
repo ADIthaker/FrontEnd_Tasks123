@@ -12,10 +12,11 @@ svg{
 }
 .country{
    fill-opacity: 0.7;
-   stroke:rgb(131, 131, 131);
-   stroke-width: 0.1;
+   stroke:rgb(50, 50, 50);
+   stroke-width: 0.25;
    
 }
 .country:hover{
     fill-opacity : 1;
+    stroke-width: 0.4;
 }

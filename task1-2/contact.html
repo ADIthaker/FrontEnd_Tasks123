@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>
+        <link rel="stylesheet" href="./form.css">   
+        
         <link rel="stylesheet" href="./styles.css">
-        <link rel="stylesheet" href="./form.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="./index.js"></script>
+        
 </head>
 <body>
     <header class="header">
@@ -35,9 +35,9 @@
         </nav>
     </header>
         <div class="form__wrapper" >
-            <form class="form">
+            <form class="form" id="form">
                 <p id="form__title">Let's Connect</p>
-                <div class="form__input__field">
+                <div class="form__input__field" id="namefield">
                     <input  type="text" name="fname" id="email" class="input" placeholder=" " autocomplete="off"/>
                     <label for="name" class="label">Email address</label>
                 </div>
@@ -63,6 +63,8 @@
         </div>
     
 </body>
+<script src="./index.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>
 <script defer>
     AOS.init();
   </script>

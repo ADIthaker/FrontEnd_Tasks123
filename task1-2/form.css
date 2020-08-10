@@ -37,6 +37,7 @@
     width:150px;
     font-weight: 600;
     color:black;
+    outline:none;
     background-color: #ABA78A;
     height:40px;
     position: relative;
@@ -104,6 +105,7 @@
 .input:not(:placeholder-shown) + .label{
     transform:translateY(-35px) scale(0.9);
     color:#918AAB;
+    /* #A80000 */
 }
 .links{
     margin:auto;
