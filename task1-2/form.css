@@ -1,19 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap'); /*title*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap'); /* navfonts */
-/* .form__wrapper{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap'); /* navfonts */
+
+.form__wrapper{
     background-color: rgba(250,250,250,1);
-} */
+    width:100%;
+    height: 100%;
+}
 .form{
     margin: auto;
+    position: absolute;
+    margin-bottom: 2rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     margin-top:2rem;
     padding:16px 18px;
-    width: 75%;
-    max-height: 600px;
+    width: 60%;
+    max-height: 650px;
     border-radius: 10px;
     font-family: 'Roboto Mono', monospace;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     background-color: rgba(250,250,250,1); 
-    
 }
 #form__title{
     font-family: 'Roboto Mono', monospace;
@@ -28,6 +35,7 @@
 
 .form__btn{
     width:150px;
+    font-weight: 600;
     color:black;
     background-color: #ABA78A;
     height:40px;
@@ -37,7 +45,9 @@
     transform: translate(-50%,-50%);
     border:1px solid black;
     border-radius: 20px;
-    margin-top:3.5rem;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 1px;
+    margin-top:2.8rem;
 }
 .form__btn:hover{
     background-color:#5E5B43;
@@ -82,7 +92,6 @@
 }
 .label{
     font-size: 1.2rem;
-   
     color:black;
     position:absolute;
     left:0%;
@@ -95,4 +104,41 @@
 .input:not(:placeholder-shown) + .label{
     transform:translateY(-35px) scale(0.9);
     color:#918AAB;
+}
+.links{
+    margin:auto;
+    width:240px;
+}
+.links__a{
+    margin-left:1.35rem;
+    width:35px;
+    height: 35px;
+}
+@media(max-width:500px){
+    .form{
+        margin-top:13rem;
+        width: 80%;
+    }
+    .form__btn{
+        font-size:0.9rem;
+    }
+    .form__title{
+        font-size: 20px;
+    }
+    .label{
+        font-size:0.8rem;
+    }
+    .links{
+        margin:auto;
+        width:120px;
+    }
+    .links__a{
+        margin-left:0.1rem;
+        width:35px;
+        height:35px;
+    }
+    .links__a img{
+        width:20px;
+        height:20px;
+    }
 }
