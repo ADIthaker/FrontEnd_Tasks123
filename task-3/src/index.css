@@ -1,22 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap');
 .sphere{
     fill:rgba(230,230,230,0.8);
     margin-left:200px;
     stroke:black;
 }
 svg{
-    margin-left: 10rem;
+    width:100%;
+    margin:auto;
 }
 .world-map{
-    margin:auto;
+    position: relative;
+    top:30%;
+    left:25%;
+    width:1000px;
+    transform:translateX(-10%);
     margin-top:3rem;
 }
 .country{
-   fill-opacity: 0.7;
+    fill-opacity : 1;
    stroke:rgb(50, 50, 50);
    stroke-width: 0.25;
    
 }
 .country:hover{
-    fill-opacity : 1;
+    
     stroke-width: 0.4;
+    fill: #888888;
 }
+.table__wrapper{
+    width:100%;
+    margin:auto;
+    margin-top:5rem;
+}
+#table{
+    margin:auto;
+    width:85%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td,th {
+    border: 1px solid #696969;
+    margin: 0;
+    padding: 16px 18px;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 400;
+}
+.wide{
+    width: 560px;
+}
+th{
+    background-color: #999999;
+    height: 30px;
+    font-size:1.5rem;
+    width : 150px;
+    font-weight: 700;
+}
+th:hover{
+    cursor: pointer;
+}
+

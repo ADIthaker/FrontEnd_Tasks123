@@ -30,12 +30,14 @@ loadAndProcess().then(countries=>{
 	.enter().append('path')
 		.attr('class','country')
 		.attr('d',pathGenerator)
-		.attr('fill',d=>colorScheme((1-d.properties.normalizedCases)/1.75))
+		.attr('fill',d=>colorScheme((1-d.properties.normalizedCases)/3.5))
 	.append('title')
 		.text(d=>{
 			return d.properties.name + ' : ' + d.properties.cases.toString();
 		})
-})
+});
+
+
 	
 
 
