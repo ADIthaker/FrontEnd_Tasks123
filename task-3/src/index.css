@@ -56,11 +56,16 @@ th{
     font-size:1.5rem;
     width : 150px;
     font-weight: 700;
+    transition: background-color 300ms linear;
 }
 th:hover{
     cursor: pointer;
+    background-color: #ccc;
 }
-
+tr:hover{
+    background-color:lightgrey;
+    cursor: pointer;
+}
 .centered{
     margin:auto;
     width:70%;
