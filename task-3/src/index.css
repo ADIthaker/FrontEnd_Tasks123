@@ -18,7 +18,7 @@ svg{
     margin-top:3rem;
 }
 .country{
-    fill-opacity : 1;
+    fill-opacity : 0.8;
    stroke:rgb(50, 50, 50);
    stroke-width: 0.25;
    
@@ -26,7 +26,7 @@ svg{
 .country:hover{
     
     stroke-width: 0.4;
-    fill: #888888;
+    fill-opacity:1;
 }
 .table__wrapper{
     width:100%;
@@ -61,3 +61,8 @@ th:hover{
     cursor: pointer;
 }
 
+.centered{
+    margin:auto;
+    width:70%;
+    text-align:center;
+}

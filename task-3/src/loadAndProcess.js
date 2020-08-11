@@ -1,15 +1,19 @@
 import { feature } from 'topojson';
 import makeCompat from './transformation';
-import {tsv,json, active} from 'd3';
+import {tsv,json} from 'd3';
 
 const makeTable=(apiData)=>{
-    const table = document.getElementById('table');
+    const tables = document.getElementById('table');
     apiData.forEach(data=>{
         const row = document.createElement('tr');
         const countryname = document.createElement('td');
         const activeCases = document.createElement('td');
         const recovered = document.createElement('td');
-        const deaths = document.createElement('td');
+		const deaths = document.createElement('td');
+		countryname.className = "country_name";
+		activeCases.className = "active_cases";
+		recovered.className = "total_recovered";
+		deaths.className = "deaths";
         countryname.innerHTML = data.country_name;
         activeCases.innerHTML = data.active_cases;
         recovered.innerHTML = data.total_recovered;
@@ -18,11 +22,10 @@ const makeTable=(apiData)=>{
         row.appendChild(activeCases);
         row.appendChild(recovered);
         row.appendChild(deaths);
-        table.appendChild(row);
+        tables.appendChild(row);
     });
 
 }
-
 export const loadAndProcess =() =>
 
 Promise.all([
@@ -40,7 +43,6 @@ Promise.all([
     let apiData = makeCompat(Data.countries_stat);
     //table code
     makeTable(apiData);
-
     //d3 process code
     const rowById= {};
     let maxCases = 0;
